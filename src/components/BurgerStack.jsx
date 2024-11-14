@@ -1,12 +1,20 @@
-const BurgerStack = (props) => {
+import Ingredient from "./Ingredient";
+
+const BurgerStack = ({ ingredients, onRemoveIngredient }) => {
   return (
     <ul>
-      {props.ingredients.map((ingredient, index) => (
-        <li key={index} style={{ backgroundColor: ingredient.color }}>
-          {ingredient.name}
-          <button onClick={() => props.onRemoveIngredient(index)}>X</button>
-        </li>
-      ))}
+      {ingredients.length === 0 ? (
+        <p>No Ingredients</p>
+      ) : (
+        ingredients.map((ingredient, index) => (
+          <Ingredient
+            key={index}
+            ingredient={ingredient}
+            onButtonClick={() => onRemoveIngredient(index)}
+            isAdd={false}
+          />
+        ))
+      )}
     </ul>
   );
 };

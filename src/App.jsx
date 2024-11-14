@@ -39,6 +39,7 @@ const App = () => {
           ingredients={availableIngredients}
           onAddIngredient={addIngredient}
         />
+
         <BurgerStack
           ingredients={stackedIngredients}
           onRemoveIngredient={removeIngredient}
