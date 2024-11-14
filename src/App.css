@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+button {
+  color: aliceblue;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  
+}
